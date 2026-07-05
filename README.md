@@ -81,7 +81,7 @@ streamlit run app.py
 
 ## سازنده
 
-[نام شما] - BPM & AI Consultant
+افسانه راوش - BPM & AI Consultant
 
 ---
 ⭐ اگر مفید بود ستاره بدید!
