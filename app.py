@@ -14,7 +14,9 @@ st.set_page_config(
 # اتصال به دیتابیس
 @st.cache_resource
 def get_engine():
-    return create_engine('postgresql://postgres:123456@localhost:5432/process_mining')
+    import os
+    password = os.environ.get('DB_PASSWORD', 'YOUR_PASSWORD')
+    return create_engine(f'postgresql://postgres:{password}@localhost:5432/process_mining')
 
 engine = get_engine()
 
