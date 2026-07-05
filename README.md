@@ -1,9 +1,7 @@
 # Process Mining & AI Readiness Assessment
-
 ابزار تحلیل فرآیند و ارزیابی آمادگی هوش مصنوعی برای سازمان‌ها
 
 ## معماری سیستم
-
 Camunda DB (act_hi_*)
 ↓
 Python + PM4Py (تحلیل)
@@ -11,7 +9,6 @@ Python + PM4Py (تحلیل)
 Process Mining DB (نتایج)
 ↓
 Streamlit Dashboard (نمایش)
-
 
 ## امکانات
 
@@ -31,7 +28,7 @@ Streamlit Dashboard (نمایش)
 
 ### ۱. کلون کردن پروژه
 ```bash
-git clone https://github.com/YOUR_USERNAME/process-mining-ai-readiness.git
+git clone https://github.com/afsaneh3041/process-mining-ai-readiness.git
 cd process-mining-ai-readiness
 ```
 
@@ -45,12 +42,17 @@ pip install -r requirements.txt
 - `camunda_db`: برای جداول Camunda
 - `process_mining`: برای نتایج تحلیل
 
-### ۴. اجرای Notebook
+### ۴. تنظیم متغیرهای محیطی
+یک فایل `.env` در پوشه پروژه بساز:
+DB_PASSWORD=پسورد_PostgreSQL_خودت
+**نکته:** فایل `.env` رو هرگز روی GitHub آپلود نکن!
+
+### ۵. اجرای Notebook
 ```bash
-jupyter notebook notebooks/process_mining_analysis.ipynb
+jupyter notebook mining.ipynb
 ```
 
-### ۵. اجرای داشبورد
+### ۶. اجرای داشبورد
 ```bash
 streamlit run app.py
 ```
@@ -78,6 +80,12 @@ streamlit run app.py
 - `pm_activity_analysis`: تحلیل فعالیت‌ها
 - `pm_ai_readiness`: امتیاز AI
 - `pm_recommendations`: توصیه‌ها
+
+## نکات امنیتی
+
+- پسورد دیتابیس رو توی `.env` نگه دار
+- فایل `.env` توی `.gitignore` قرار داره و آپلود نمی‌شه
+- توکن‌های API رو هرگز توی کد قرار نده
 
 ## سازنده
 
